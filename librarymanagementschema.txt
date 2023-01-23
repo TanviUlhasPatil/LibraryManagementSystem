@@ -1,0 +1,23 @@
+CREATE TABLE data (  
+bookid int(5),  
+sname varchar(50),
+sclass varchar(20),
+sroll int(4),   
+CONSTRAINT fk_books FOREIGN KEY (bookid)  
+REFERENCES books(id)  
+ON DELETE CASCADE  
+ON UPDATE CASCADE  
+);
+
+
+
+
+CREATE TABLE books (  
+id int(5),  
+bname varchar(50),
+authorname varchar(50),
+pages int(4),   
+PRIMARY KEY(id)
+ON DELETE CASCADE  
+ON UPDATE CASCADE  
+);   
